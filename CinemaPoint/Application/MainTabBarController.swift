@@ -8,7 +8,6 @@
 import UIKit
 
 final class MainTabBarController: UITabBarController {
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +20,5 @@ final class MainTabBarController: UITabBarController {
         tabBar.backgroundColor = Theme.background
         tabBar.unselectedItemTintColor = .systemGray3
         tabBar.isTranslucent = true
-        
-       
     }
 }

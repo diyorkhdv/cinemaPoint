@@ -71,7 +71,6 @@ final class ProfileViewController: UIViewController {
             return
         }
 
-        // Показываем имя, если оно есть (иначе просто email)
         let name = user.displayName ?? "User"
         titleLabel.text = "Welcome, \(name)!"
         emailLabel.text = user.email ?? ""

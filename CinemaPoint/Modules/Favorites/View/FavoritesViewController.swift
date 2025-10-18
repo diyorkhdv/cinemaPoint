@@ -133,4 +133,5 @@ extension FavoritesViewController: UICollectionViewDataSource, UICollectionViewD
         cell.configure(with: movie)
         return cell
     }
+    
 }

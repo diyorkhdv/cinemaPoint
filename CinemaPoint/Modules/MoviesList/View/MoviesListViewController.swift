@@ -30,7 +30,7 @@ final class MoviesListViewController: UIViewController {
         viewModel.resetToPopular { [weak self] in
             self?.hideLoader()
             self?.collectionView.reloadData()
-            self?.animateCells()
+//            self?.animateCells()
         }
     }
 
@@ -98,16 +98,16 @@ final class MoviesListViewController: UIViewController {
         collectionView.isHidden = false
     }
 
-    private func animateCells() {
-        let cells = collectionView.visibleCells
-        let h = collectionView.bounds.size.height
-        for c in cells { c.transform = CGAffineTransform(translationX: 0, y: h) }
-        for (i, c) in cells.enumerated() {
-            UIView.animate(withDuration: 0.7, delay: 0.05 * Double(i),
-                           usingSpringWithDamping: 0.8, initialSpringVelocity: 0.5,
-                           options: .curveEaseInOut) { c.transform = .identity }
-        }
-    }
+//    private func animateCells() {
+//        let cells = collectionView.visibleCells
+//        let h = collectionView.bounds.size.height
+//        for c in cells { c.transform = CGAffineTransform(translationX: 0, y: h) }
+//        for (i, c) in cells.enumerated() {
+//            UIView.animate(withDuration: 0.7, delay: 0.05 * Double(i),
+//                           usingSpringWithDamping: 0.8, initialSpringVelocity: 0.5,
+//                           options: .curveEaseInOut) { c.transform = .identity }
+//        }
+//    }
 }
 
 // MARK: - DataSource/Delegate + Infinite Scroll

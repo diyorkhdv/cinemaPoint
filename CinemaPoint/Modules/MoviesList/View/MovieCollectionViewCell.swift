@@ -13,7 +13,7 @@ final class MovieCollectionViewCell: UICollectionViewCell {
     private let posterImageView = UIImageView()
     private let titleLabel = UILabel()
     private let ratingLabel = UILabel()
-    private let gradientLayer = CAGradientLayer()
+//    private let gradientLayer = CAGradientLayer()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,7 +24,7 @@ final class MovieCollectionViewCell: UICollectionViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        gradientLayer.frame = posterImageView.bounds
+//        gradientLayer.frame = posterImageView.bounds
     }
 
     // MARK: - UI Setup
@@ -40,9 +40,9 @@ final class MovieCollectionViewCell: UICollectionViewCell {
         posterImageView.clipsToBounds = true
         posterImageView.layer.cornerRadius = 12
 
-        gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.withAlphaComponent(0.7).cgColor]
-        gradientLayer.locations = [0.5, 1.0]
-        posterImageView.layer.addSublayer(gradientLayer)
+//        gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.withAlphaComponent(0.7).cgColor]
+//        gradientLayer.locations = [0.5, 1.0]
+//        posterImageView.layer.addSublayer(gradientLayer)
 
         titleLabel.font = .boldSystemFont(ofSize: 14)
         titleLabel.textColor = .white
